@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    AdvancedEdu
                 </div>
 
                 <div class="links">
