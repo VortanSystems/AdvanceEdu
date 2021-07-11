@@ -40,7 +40,7 @@ class ProfilesController extends Controller
             $data,
             ['image' => $imagePath] 
         ));
-        
+
         return redirect("/profile/{$user->id}");
 
     }
