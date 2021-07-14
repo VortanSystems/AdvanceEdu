@@ -13,6 +13,8 @@
 
 use App\Http\Controllers\CoursesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostLikeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +23,8 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/users', 'UserController@index');
 
 Route::get('/courses', 'CoursesController@index');
 Route::get('/courses/create', 'CoursesController@create');
@@ -31,3 +35,9 @@ Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 
+Route::get('/posts', 'PostController@index')->name('posts');
+Route::post('/posts', 'PostController@store');
+Route::delete('/posts/{post}', 'PostController@destroy')->name('posts.destroy');
+
+Route::post('/posts/{post}/likes', 'PostLikeController@store')->name('posts.likes');
+Route::delete('/posts/{post}/likes', 'PostLikeController@destroy')->name('posts.likes');
