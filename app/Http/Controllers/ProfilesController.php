@@ -36,11 +36,17 @@ class ProfilesController extends Controller
             $image->save();
         }
 
+
         auth()->user()->profile->update(array_merge(
             $data,
             ['image' => $imagePath] 
         ));
-        
+
+        $img = array_merge(
+            $data,
+            ['image' => $imagePath] 
+        );
+
         return redirect("/profile/{$user->id}");
 
     }

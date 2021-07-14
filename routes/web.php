@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\CoursesController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,8 +23,9 @@ Route::get('/admin', function () {
 });
 
 Route::get('/courses', 'CoursesController@index');
+Route::get('/courses/create', 'CoursesController@create');
 
-Auth::routes();
+Auth::Routes();
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');

@@ -15,4 +15,9 @@ class CoursesController extends Controller
             'courses' => $courses,
         ]);
     }
+
+    public function create()
+    {
+        return view('cars.create');
+    }
 }
