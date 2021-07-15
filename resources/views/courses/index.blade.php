@@ -10,7 +10,7 @@
         <div class="col-md-6">
         </div>
         <div class="col-md-2">
-         <a href="">Create New Course</a>
+         <a href="/courses/create">Create New Course</a>
         </div>
     </div>
     <div class="row pt-5">
@@ -22,9 +22,7 @@
                 <div class="card-body">
                     <h4 class="card-title" >{{ $course->title }}</h4>
                     <p class="card-text" style="font-size: 16px !important;line-height: 24px !important;font-weight: 400 !important;color: #717171 !important;">{{ $course->description }}</p>
-                    <div class="card-btn">
-                        <button class="btn btn-primary">Start Course</button>
-                    </div>
+                        <a href="/courses/{{ $course->id }}" class="btn btn-primary">Start Course</a>
                 </div>
             </div>
         </div>

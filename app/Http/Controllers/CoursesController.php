@@ -37,6 +37,7 @@ class CoursesController extends Controller
 
         $imagePath = request('image')->store('course', 'public');
 
+
         auth()->user()->courses()->create([
             'title' => $data['title'],
             'description' => $data['description'],
@@ -45,5 +46,10 @@ class CoursesController extends Controller
         ]);
         
        return redirect('/courses');
+    }
+
+    public function show($course)
+    {
+
     }
 }
