@@ -7,6 +7,11 @@ use App\Course;
 
 class CoursesController extends Controller
 {
+    public function __construct()
+    {
+       $this->middleware('auth'); 
+    }
+
     public function index()
     {
         $courses = Course::all();
@@ -18,6 +23,27 @@ class CoursesController extends Controller
 
     public function create()
     {
-        return view('cars.create');
+        return view('courses.create');
+    }
+
+    public function store()
+    {
+        $data = request()->validate([
+           'title' => 'required',
+           'description' => 'required',
+           'content' => 'required',
+           'image' => 'required|image',
+        ]);
+
+        $imagePath = request('image')->store('course', 'public');
+
+        auth()->user()->courses()->create([
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'content' => $data['content'],
+            'image' => $imagePath,
+        ]);
+        
+       return redirect('/courses');
     }
 }
