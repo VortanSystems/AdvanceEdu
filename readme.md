@@ -21,8 +21,19 @@ The platform is accessible here https://advancededu.herokuapp.com/
 
 ## Usage
 
-1. Clone the repo: git clone https://github.com/godanaemiru/AdvancedEdu.git
-2. open folder >cd AdvancedEdu
+1. Clone the repo: git clone
+```
+https://github.com/godanaemiru/AdvancedEdu.git
+```
+ 
+2. open folder 
+```
+cd AdvancedEdu
+```
+
+## Todos
+
+* fix bug for image upload to remote server
 
 
 
