@@ -84,6 +84,10 @@
                     AdvancedEdu
                 </div>
 
+                <div class="" style="color: #636b6f; font-weight:bold; font-size: 20px; font-style:oblique;">
+                    where we make learning easy and fun
+                </div>
+
             </div>
         </div>
     </body>

@@ -17,7 +17,7 @@
     <div class="row pt-5">
 
         @foreach ($courses as $course)
-        <div class="col-4 ">
+        <div class="col-4 pb-4">
             <div class="card">
                 <img class="card-img-top" src="/storage/{{ $course->image }}" alt="">
                 <div class="card-body">

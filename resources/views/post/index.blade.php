@@ -12,19 +12,19 @@
                       @csrf
                       
                       <div class="mb-4 p-4">
-                        <label for="body" class="sr-only">Body</label>
-                        <textarea name="body" id="body" cols="70" rows="3"
-                        class="border-2 w-full p-5 rounded-lg @error('body') border-red-500 @enderror" placeholder="Post something!"></textarea>
-    
-                        @error('body')
-                            <div class="text-red-500 mt-2 text-sm">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                            <label for="body" class="sr-only">Body</label>
+                            <textarea name="body" id="body" cols="70" rows="3"
+                            class="border-2 w-full p-5 rounded-lg @error('body') border-red-500 @enderror" placeholder="Post something!"></textarea>
+        
+                            @error('body')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                            @enderror
 
-                        <div class="pt-2">
-                            <button type="submit" class="btn btn-primary">Post</button>
-                        </div>
+                            <div class="pt-2">
+                                <button type="submit" class="btn btn-primary">Post</button>
+                            </div>
                        </div>
     
                     
@@ -74,7 +74,9 @@
 
                     {{ $posts->links() }}
                 @else
+                    <div class="pl-4">
                     There are no posts
+                    </div>
                 @endif
     
             </div>
