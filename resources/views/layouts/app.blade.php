@@ -33,9 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto ">
-                        <li class="p-3"><a href="/courses">Courses</a></li>
-                        <li class="p-3"><a href="/posts">Discuss</a></li>
-                        <li class="p-3"><a href="/users">Users</a></li>
+                        <li class="p-3"><a href="/courses" style="text-decoration: none;">Courses</a></li>
+                        <li class="p-3"><a href="/posts" style="text-decoration: none;">Discuss</a></li>
+                        <li class="p-3"><a href="/users" style="text-decoration: none;">Users</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

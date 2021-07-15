@@ -11,7 +11,7 @@
         </div>
 
         <div class="col-md-2">
-         <a href="/courses/create" class="btn">Create New Course</a>
+         <a href="/courses/create" style="text-decoration: none;">Create New Course</a>
         </div>
     </div>
     <div class="row pt-5">
