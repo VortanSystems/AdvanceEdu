@@ -16,5 +16,13 @@ The platform is accessible here https://advancededu.herokuapp.com/
 
 * PHP
 * Composer
+* mysql
+* server
+
+## Usage
+
+1. Clone the repo: git clone https://github.com/godanaemiru/AdvancedEdu.git
+2. open folder >cd AdvancedEdu
+
 
 
