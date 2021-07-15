@@ -14,8 +14,7 @@ The platform is accessible here https://advancededu.herokuapp.com/
 
 ## Requirements
 
-. PHP
-. Node & NPM
-. Composer
+* PHP
+* Composer
 
 
