@@ -21,14 +21,22 @@ The platform is accessible here https://advancededu.herokuapp.com/
 
 ## Usage
 
-1. Clone the repo: git clone
+1. Clone the repo:
 ```
-https://github.com/godanaemiru/AdvancedEdu.git
+git clone https://github.com/godanaemiru/AdvancedEdu.git
 ```
  
-2. open folder 
+2. open folder: 
 ```
 cd AdvancedEdu
+```
+3. Migrate databases:
+```
+php artisan migrate
+```
+4. Run server:
+```
+php artisan serve
 ```
 
 ## Todos
