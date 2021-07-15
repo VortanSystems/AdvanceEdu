@@ -4,11 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-<<<<<<< HEAD
-            <img src="/storage/{{$user->profile->image}}" alt="" class="rounded-circle w-100">
-=======
+
             <img src="{{ $user->profile->profileImage() }}" class="rounded-circle w-100" alt="">
->>>>>>> godanaemiru
+
         </div>
         <div class="col-9 pt-5">
         
