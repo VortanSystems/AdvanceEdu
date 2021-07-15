@@ -6,7 +6,7 @@ $url = parse_url(getenv("mysql://b8030653ec0eb9:7061d85e@us-cdbr-east-04.cleardb
 $host = $url["us-cdbr-east-04.cleardb.com"] ?? null;
 $username = $url["b8030653ec0eb9"] ?? null;
 $password = $url["7061d85e"] ?? null;
-$database = substr($url["heroku_ef51a3306b5bd66"], 1);
+$database = $url["heroku_ef51a3306b5bd66"] ?? null;
 
 return [
 
