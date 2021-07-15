@@ -8,9 +8,9 @@
 
         </div>
         <div class="col-8">
-            <h1 class="" >{{ $course->title }}</h1>
-            <p class="pt-3" style="font-weight: 400 !important;color: #717171 !important;">{{ $course->description }}</p>
-            <p class="pt-5">{{ $course->content }} </p>
+            <h1 class="" style="">{{ $course->title }}</h1>
+            <p class="pt-3" style="font-weight: 400; color: #717171; font-size: 20px;">{{ $course->description }}</p>
+            <p class="pt-5" style="font-size: 25px; ">{{ $course->content }} </p>
         </div>
     </div>
 </div>

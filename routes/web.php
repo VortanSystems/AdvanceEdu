@@ -26,7 +26,6 @@ Route::get('/users', 'UserController@index');
 Route::get('/courses', 'CoursesController@index');
 Route::get('/courses/create', 'CoursesController@create');
 Route::get('/courses/{course}', 'CoursesController@show');
-
 Route::post('/courses', 'CoursesController@store');
 
 Auth::Routes();
