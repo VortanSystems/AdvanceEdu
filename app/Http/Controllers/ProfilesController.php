@@ -43,11 +43,6 @@ class ProfilesController extends Controller
             $imageArray ?? []
         ));
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> godanaemiru
         return redirect("/profile/{$user->id}");
 
     }
