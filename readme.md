@@ -2,7 +2,7 @@
 
 An implementation of a system that connects people and provides learning content for them.
 
-![alt text](https://github.com/godanaemiru/AdvancedEdu/blob/master/image/Screenshot%20from%202020-11-24%2013-36-38.png?raw=true "true")
+![alt text](https://github.com/VortanSystems/AdvanceEdu/blob/master/image/display.PNG)
 
 ## About AdvanceEdu 
 
