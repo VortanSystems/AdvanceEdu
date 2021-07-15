@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Profile;
 
 class UserController extends Controller
 {
@@ -11,7 +12,7 @@ class UserController extends Controller
     {
         $users = User::all();
         return view('users.index', [
-            'users' => $users
+            'users' => $users,
         ]);
     }
 }

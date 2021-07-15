@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
+use App\User;
 
 class CoursesController extends Controller
 {
@@ -48,8 +49,8 @@ class CoursesController extends Controller
        return redirect('/courses');
     }
 
-    public function show($course)
+    public function show(Course $course)
     {
-
+        return view('courses.show', compact('course'));
     }
 }

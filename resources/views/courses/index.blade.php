@@ -9,8 +9,9 @@
         </div>
         <div class="col-md-6">
         </div>
+
         <div class="col-md-2">
-         <a href="/courses/create">Create New Course</a>
+         <a href="/courses/create" class="btn">Create New Course</a>
         </div>
     </div>
     <div class="row pt-5">
