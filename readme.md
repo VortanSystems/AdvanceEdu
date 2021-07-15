@@ -12,4 +12,10 @@ With the onset of the <b>new-normal</b> this platform becomes very effective in 
 
 The platform is accessible here https://advancededu.herokuapp.com/
 
+## Requirements
+
+. PHP
+. Node & NPM
+. Composer
+
 
