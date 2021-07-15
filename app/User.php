@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Like;
+use App\Course;
 
 class User extends Authenticatable
 {
@@ -53,4 +55,20 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class);
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class)->orderBy('created_at', 'DESC');
+    }
+
 }

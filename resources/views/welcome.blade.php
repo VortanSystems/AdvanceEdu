@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/courses') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -84,15 +84,10 @@
                     AdvancedEdu
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="" style="color: #636b6f; font-weight:bold; font-size: 20px; font-style:oblique;">
+                    we make learning easy and fun
                 </div>
+
             </div>
         </div>
     </body>
