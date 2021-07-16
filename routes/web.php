@@ -23,6 +23,8 @@ Route::get('/', function () {
 
 Route::get('/users', 'UserController@index');
 
+Route::post('follow/{user}', 'FollowsController@store');
+
 Route::get('/courses', 'CoursesController@index');
 Route::get('/courses/create', 'CoursesController@create');
 Route::get('/courses/{course}', 'CoursesController@show');

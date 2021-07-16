@@ -14,7 +14,7 @@
             <div class="d-flex align-items-center pb-3">
             <div class="h4">{{ $user->username }}</div>
 
-            <button class="btn btn-primary ml-4">Follow</button>
+                <follow-button user-id = "{{ $user->id }}" follows="{{ $follows }}"></follow-button>
             </div>    
             
              @can('update', $user->profile)
@@ -24,8 +24,8 @@
             </div>
             
             <div class="d-flex pl-5 pt-2">
-                <div class="pr-5 pt-1"><strong>38 </strong> followers </div>
-                <div class="pr-5 pt-1"><strong>38 </strong> followers </div>
+                <div class="pr-5 pt-1"><strong>{{count( $user->profile->followers) }}</strong> followers </div>
+                <div class="pr-5 pt-1"><strong>{{count( $user->profile->following) }}</strong> followers </div>
             </div>
 
             <div class="pl-5 "><strong>13 </strong> courses </div> 
