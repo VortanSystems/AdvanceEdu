@@ -26,24 +26,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                <input id="email" type="hidden" class="form-control @error('email') is-invalid @enderror" value="ordinary" name="user_type" value="{{ old('user_type') }}" required autocomplete="user_type">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -52,6 +40,34 @@
                                 @enderror
                             </div>
                         </div>
+
+
+
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Join As:') }}</label>
+
+                            <div class="col-md-6">
+
+                                <select id="access_level"  class="form-control @error('access_level') is-invalid @enderror" name="access_level" value="{{ old('access_level') }}" required autocomplete="access_level">
+                                    
+
+                                    <option selected="true" id="access_level"  class="form-control"  value="student">Student</option>
+
+                                    <option id="access_level" class="form-control" value="tutor" >Tutor</option>
+
+                                </select>
+                              
+
+                                @error('access_level')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,34 +13,47 @@
 |
 */
 
-use App\Http\Controllers\CoursesController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\PostLikeController;
-
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/users', 'UserController@index');
+Auth::routes();
 
-Route::post('follow/{user}', 'FollowsController@store');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/courses', 'CoursesController@index');
-Route::get('/courses/create', 'CoursesController@create');
-Route::get('/courses/{course}', 'CoursesController@show');
-Route::post('/courses', 'CoursesController@store');
+Route::get('/profile', function () { return view('profile'); });
+//Route::get('/courses', function () { return view('courses'); });
+Route::get('/assignments', function () { return view('assignments'); });
+Route::get('/tutors', function () { return view('tutors'); });
+Route::get('/library', function () { return view('library'); });
+Route::get('/announcement', function () { return view('announcement'); });
+Route::get('/add-course', function () { return view('add-course'); });
 
-Auth::Routes();
+Route::get('/courses', [App\Http\Controllers\courseViewController::class, 'index'])->name('courses');
 
-Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
-Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
-Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
+Route::get('/edit/{id}', [App\Http\Controllers\courseViewController::class, 'index'])->name('edit/{id}');
+Route::get('/edit/{id}', [App\Http\Controllers\courseUpdateController::class, 'show'])->name('edit/{id}');
+Route::post('/edit/{id}', [App\Http\Controllers\courseUpdateController::class, 'edit'])->name('edit/{id}');
 
-Route::get('/posts', 'PostController@index')->name('posts');
-Route::post('/posts', 'PostController@store');
-Route::delete('/posts/{post}', 'PostController@destroy')->name('posts.destroy');
 
-Route::post('/posts/{post}/likes', 'PostLikeController@store')->name('posts.likes');
-Route::delete('/posts/{post}/likes', 'PostLikeController@destroy')->name('posts.likes');
+
+Route::get('/insert', [App\Http\Controllers\courseAddController::class, 'insert'])->name('insert');
+Route::post('create', [App\Http\Controllers\courseAddController::class, 'create'])->name('create');
+
+
+Route::get('/uploadfile', [App\Http\Controllers\UploadFileController::class, 'index'])->name('uploadfile');
+Route::post('uploadfile', [App\Http\Controllers\UploadFileController::class, 'showUploadFile'])->name('uploadfile');
+
+
+Route::get('/apply-to-teach/{id}', [App\Http\Controllers\HomeController::class, 'teach'])->name('apply-to-teach/{id}');
+Route::post('teachtoday', [App\Http\Controllers\applyToTeachController::class, 'create'])->name('teachtoday');
+
+
+
+
+
+Route::get('/update_profile', [App\Http\Controllers\profileController::class, 'index'])->name('update_profile');
+Route::post('/update_profile', [App\Http\Controllers\profileController::class, 'profileUpdate'])->name('update_profile');
+
+

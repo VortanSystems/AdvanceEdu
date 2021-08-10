@@ -1,47 +1,48 @@
-# AdvancedEdu
+-------------------------------------------------------------------------------------
 
-An implementation of a system that connects people and provides learning content for them.
+Design By Naweri Industries
 
-![alt text](https://github.com/VortanSystems/AdvanceEdu/blob/master/image/display.PNG)
+http://www.naweri.xyz
+http://www.naweri.xyz/pay
+http://www.naweri.xyz/gospena
 
-## About AdvanceEdu 
-
-AdvanceEdu is an e-learning platform that provides a wide range of courses to students in areas that hardly have access to these courses and material physically. 
-
-With the onset of the <b>new-normal</b> this platform becomes very effective in extending education services and courses to learners that want to enrich their lives. It is aimed at helping youths between ages 14-30 to help them skill up for job opportunities and to gain their edge over the rest of the market in the world. 
-
-The platform is accessible here https://advancededu.herokuapp.com/
-
-## Requirements
-
-* PHP
-* Composer
-* mysql
-* server
-
-## Usage
-
-1. Clone the repo:
-```
-git clone https://github.com/godanaemiru/AdvancedEdu.git
-```
- 
-2. open folder: 
-```
-cd AdvancedEdu
-```
-3. Migrate databases:
-```
-php artisan migrate
-```
-4. Run server:
-```
-php artisan serve
-```
-
-## Todos
-
-* fix bug for image upload to remote server
+https://www.naweriindustries.business.site
+https://g.page/naweri
 
 
 
+-------------------------------------------------------------------------------------
+Do Not Migrate This Project Like Any Other Laravel Project
+
+AdvancedEdu is an E-learning Program that lets students and tutors to signup 
+tutors teach and students learn
+
+This project is still under construction so we don't recomend production use
+
+------------------------------------------------------------------------------------
+
+Naweri Industries is not the author of all the content in this project and shall therefore not be held responsible for any breach of Intellectual Rights Regarding Owners, Publishers and Users of the Content.
+
+
+
+
+Ensure You Fully modify the Project before use
+
+-----------------------------------------------------------------------------------
+Please Test in a safe environment to avoid damages.
+-----------------------------------------------------------------------------------
+
+
+********************************How To Install*************************************
+
+1.Copy The Project Files to your server root directory
+
+2.Copy Database in the "DB - INSTALL - PHPMYADMIN" folder and install on your server
+
+3.Update Your Information in the .env File
+
+4. Run PHP ARTISAN SERVE.
+
+visit your Domain.
+
+//--------------------Refer to laravel documentation for more information.........
