@@ -17,8 +17,7 @@ class applyToTeach extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'tutor_id', 'course_id', 'cv_name', 'identifications', 'user_brief',
-	];
+		'tutor_id', 'course_id', 'cv_name', 'identifications',];
 
 
 }

@@ -23,25 +23,25 @@
     <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
-    <link href="dashboard/css/font-face.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+       <link href="{{ asset('dashboard/css/font-face.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="dashboard/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="dashboard/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="dashboard/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/wow/animate.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="dashboard/css/theme.css" rel="stylesheet" media="all">
+    <link href="{{ asset('dashboard/css/theme.css')}}" rel="stylesheet" media="all">
 
 </head>
 
@@ -52,9 +52,132 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
+
+                                            <?php
+
+$useragent=$_SERVER['HTTP_USER_AGENT'];
+
+if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i',$useragent)||preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i',substr($useragent,0,4)))
+
+{
+
+// Mobile Display
+
+    ?>
+
+
+
+<div class="dropdown">
+  <button style="width:40px; height: 40px; border-radius: 100%;" class="">
+
+   @if(Auth::user()->profile_photo)
+   <img style="width:43px; height: 43px; border-radius: 100%;"  src="uploads/{{ Auth::user()->profile_photo }}" />
+   <i   class="fa fa-caret-down"></i>
+        @else
+      <i style="font-size:40px;" class="fa fa-user"></i>
+          @endif
+      </button>
+  <div class="dropdown-content">
+    <a href="/profile"><i class="fa fa-user-graduate"></i> &nbsp;Profile</a>
+
+   @if((Auth::user()->user_type)=='admin')
+   <a href="/system"> <i class="zmdi zmdi-settings"></i> &nbsp;System</a>
+@endif 
+      <a  href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+     <i class="zmdi zmdi-power"></i> &nbsp;Logout</a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+
+      @csrf
+      </form>
+    
+  </div>
+
+</div>
+
+
+<div class="dropdown">
+  <button class=""><i style="font-size:30px; color:indigo;" class="zmdi zmdi-notifications"></i></button>
+  <div class="dropdown-content">
+    <a href="#">Notification 1</a>
+    <a href="#">Notification 2</a>
+    <a href="#">Notification 3</a>
+  </div>
+</div>
+
+
+
+
+  <button class=""><i style="font-size:30px; color:indigo;" class="zmdi zmdi-email"></i></button>
+  
+
+
+
+  <button class=""><i style="font-size:30px; color:indigo;" class="zmdi zmdi-comments"></i></button>
+  
+ 
+
+
+
+
+
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  float:left;
+  margin-left: 0px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: left;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+
+
+    <?php
+}?>
+                      
+
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -66,103 +189,8 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                       
-                        </li>
-                        <li>
-                            <a href="chart">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li>
-                        <li>
-                            <a href="table">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="calendar">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="login">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="button">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- END HEADER MOBILE-->
-
-        <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
-                </a>
-            </div>
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="/home">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             
 
@@ -175,10 +203,42 @@
                             <a href="/assignments">
                                 <i class="fas fa-tasks"></i>Assignments</a>
                         </li>
-                        <li>
+
+
+@if((Auth::user()->user_type)=='admin')
+                           <li>
+                    <a href="/users">
+                                <i class="fas fa-chalkboard-teacher"></i>Manage Users</a>
+                        </li>
+                        
+                @else      
+   <li>
                             <a href="/tutors">
                                 <i class="fas fa-chalkboard-teacher"></i>Tutors</a>
                         </li>
+                     @endif
+
+
+                     @if((Auth::user()->access_level)=='tutor')
+                           <li>
+                    <a href="/my_applications">
+                                <i class="fas fa-suitcase"></i>Applications</a>
+                        </li>
+                        
+               
+                     
+
+                     <?php $tiris=$tutoraapplics[0]->tutor_id; ?>
+
+                     @if($tiris>0)
+
+                           <li>
+                    <a href="/my_courses">
+                                <i class="fas fa-book"></i>My Courses</a>
+                        </li>
+                     @endif
+@endif
+
                         <li>
                             <a href="/library">
                                 <i class="fas fa-archive"></i>Library</a>
@@ -187,70 +247,94 @@
                             <a href="/announcement">
                                 <i class="fas fa-bullhorn"></i>Announcements</a>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-calendar-alt"></i>Events</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login">Upcoming</a>
-                                </li>
-                                <li>
-                                    <a href="register">Expired</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass">Today</a>
-                                </li>
-                            </ul>
+                           <li>
+                            <a href="/announcement">
+                                <i class="fas fa-bullhorn"></i>Events</a>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-cart-plus"></i>Shop</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="button">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo">Typography</a>
-                                </li>
-                            </ul>
+                   
+                 
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="{{ asset('images/icon/logo.png') }}" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="/home">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+
+                        </li>
+                        <li>
+                            <a href="/courses">
+                                <i class="fas fa-user-graduate"></i>Courses</a>
+                        </li>
+                        <li>
+                            <a href="/assignments">
+                                <i class="fas fa-tasks"></i>Assignments</a>
                         </li>
 
-                         <li>
-                            <a href="map">
-                                <i class="fas fa-users"></i>Community</a>
-                        </li>
 
-                          <li>
-                            <a href="map">
-                                <i class="fa fa-newspaper"></i>News</a>
+@if((Auth::user()->user_type)=='admin')
+                           <li>
+                    <a href="/users">
+                                <i class="fas fa-chalkboard-teacher"></i>Manage Users</a>
                         </li>
+                        
+                @else      
+   <li>
+                            <a href="/tutors">
+                                <i class="fas fa-chalkboard-teacher"></i>Tutors</a>
+                        </li>
+                     @endif
+
+
+                     @if((Auth::user()->access_level)=='tutor')
+                           <li>
+                    <a href="/my_applications">
+                                <i class="fas fa-suitcase"></i>Applications</a>
+                        </li>
+                        
+               
+                     
+
+                     <?php $tiris=$tutoraapplics[0]->tutor_id; ?>
+
+                     @if($tiris>0)
+
+                           <li>
+                    <a href="/my_courses">
+                                <i class="fas fa-book"></i>My Courses</a>
+                        </li>
+                     @endif
+@endif
+
+                        <li>
+                            <a href="/library">
+                                <i class="fas fa-archive"></i>Library</a>
+                        </li>
+                        <li>
+                            <a href="/announcement">
+                                <i class="fas fa-bullhorn"></i>Announcements</a>
+                        </li>
+                   
+                           <li>
+                            <a href="/events">
+                                <i class="fas fa-calendar"></i>Events</a>
+                        </li>
+                   
+
                     </ul>
                 </nav>
             </div>
@@ -258,14 +342,33 @@
         <!-- END MENU SIDEBAR-->
 
         <!-- PAGE CONTAINER-->
-        <div class="page-container">
+              <?php
+
+$useragent=$_SERVER['HTTP_USER_AGENT'];
+
+if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i',$useragent)||preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i',substr($useragent,0,4)))
+
+{
+
+// Mobile Display
+
+    ?>
+
+
+<div class="page">
+    <?php
+} else
+
+{?>
+
             <!-- HEADER DESKTOP-->
             <header class="header-desktop">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                           
+   <form class="form-header" action="{{ route('find_course') }}" method="GET">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Find A Course..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -383,6 +486,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+
+
+
+
+
+
+
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
@@ -396,7 +507,18 @@
                                             
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">{{ Auth::user()->name }}</a>
+                                            <a class="js-acc-btn" href="#" style="
+  width: 90px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+   ">{{ Auth::user()->name }}</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -413,7 +535,18 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">{{ Auth::user()->name }}</a>
+                                                        <a href="#" style=" 
+  width: 90px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+   ">{{ Auth::user()->name }}</a>
                                                     </h5>
                                                     <span class="email">{{ Auth::user()->email }}</span>
                                                 </div>
@@ -423,10 +556,15 @@
                                                     <a href="/profile">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
+                                               
+                                               @if((Auth::user()->user_type)=='admin')
+
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
+                                                    <a href="/system">
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
                                                 </div>
+
+                                                @endif
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
@@ -443,12 +581,35 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
+<div class="page-container">
+<?php } ?>
             <!-- HEADER DESKTOP-->
+
 
             <!-- MAIN CONTENT-->
             <div class="main">
@@ -998,28 +1159,32 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="dashboard/vendor/jquery-3.2.1.min.js"></script>
+  <!-- Jquery JS-->
+     <script src="{{ asset('dashboard/vendor/jquery-3.2.1.min.js') }}"></script>
     <!-- Bootstrap JS-->
-    <script src="dashboard/vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="dashboard/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="{{ asset('dashboard/vendor/bootstrap-4.1/popper.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
     <!-- Vendor JS       -->
-    <script src="dashboard/vendor/slick/slick.min.js">
+    <script src="{{ asset('dashboard/vendor/slick/slick.min.js') }}">
     </script>
-    <script src="dashboard/vendor/wow/wow.min.js"></script>
-    <script src="dashboard/vendor/animsition/animsition.min.js"></script>
-    <script src="dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="{{ asset('dashboard/vendor/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/animsition/animsition.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') }}">
     </script>
-    <script src="dashboard/vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="dashboard/vendor/counter-up/jquery.counterup.min.js">
+    <script src="{{ asset('dashboard/vendor/counter-up/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/counter-up/jquery.counterup.min.js') }}">
     </script>
-    <script src="dashboard/vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="dashboard/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="dashboard/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="dashboard/vendor/select2/select2.min.js">
+    <script src="{{ asset('dashboard/vendor/circle-progress/circle-progress.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/chartjs/Chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/select2/select2.min.js') }}">
     </script>
 
     <!-- Main JS-->
-    <script src="dashboard/js/main.js"></script>
+    <script src="{{ asset('dashboard/js/main.js') }}"></script>
+
+
+
 
 </body>
 

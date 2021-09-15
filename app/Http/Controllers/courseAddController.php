@@ -28,7 +28,8 @@ class courseAddController extends Controller
 			'course_status' => 'required|string|min:3|max:255',
 			'sub_description' => 'required|string|min:3|max:255',
 			'course_description' => 'required|string|min:50',
-			'price' => 'required|string|min:50',
+			'price' => 'required|integer',
+			'preview_image'=>'required|Mimes:jpeg,jpg,gif,png,webp| dimensions:width=800,height=650',
 
 			
 		];

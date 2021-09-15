@@ -16,7 +16,7 @@ class applyToTeachController extends Controller
        $rules = [
             'course_id' => 'required|string',
             'tutor_id' => 'required|string',
-            'course_description' => 'required|string|min:150',
+            
            
 
             
@@ -53,13 +53,13 @@ class applyToTeachController extends Controller
                 $student->tutor_id = $data['tutor_id'];
                 $student->cv_name = $filenamecv;
                 $student->identifications = $filenameid;
-                $student->user_brief = $data['course_description'];
-               
+                $student->number_of_students='0';
+                $student->application_status='pending';
                 $student->save();
                 return back()->with('message',"Application Submitted successfully");
             }
             catch(Exception $e){
-            	return  back()->with('apply_to_teach',"Operation Failed");
+            	return  back()->with('errors',"Operation Failed");
                 
             }
         }

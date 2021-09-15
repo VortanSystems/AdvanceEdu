@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Http\Requests;
+use \Illuminate\Http\Response;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 
 class UploadFileController extends Controller
@@ -41,6 +44,24 @@ echo 'File Mime Type: '.$file->getMimeType();
 */
 $filename=$file->getClientOriginalName();
 $destinationPath = 'uploads';
+  $rules = [
+			'image' => 'required|Mimes:jpeg,jpg,gif,png| dimensions:width=350,height=500',
+			
+
+			
+		];
+		$validator = Validator::make($request->all(),$rules);
+		if ($validator->fails()) {
+			return back()
+			->withInput()
+			->withErrors($validator);
+		}
+
+		else
+
+		{
+
+
 $file->move($destinationPath,$file->getClientOriginalName());
 
 
@@ -50,6 +71,12 @@ $user =Auth::user();
         
         $user->save();
         return back()->with('message','Profile Picture Updated');
+
+
+
+		}
+
+
 
 
 

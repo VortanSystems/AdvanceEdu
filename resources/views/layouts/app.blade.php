@@ -3,22 +3,78 @@
 <head>
     <meta charset="utf-8">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+<?php
 
 
+  
+
+      $get_sys_data=DB::select('select * from system_settings_general ');
+
+      $metatitle=$get_sys_data[0]->metatitle;
+      $metakeywords=$get_sys_data[0]->metakeywords;
+      $metadescription=$get_sys_data[0]->metadescription;
+      $metafavicon=$get_sys_data[0]->metafavicon;
+      $metalogo=$get_sys_data[0]->metalogo;
+      $metablacklogo=$get_sys_data[0]->meta_black_logo;
+      $metaimage=$get_sys_data[0]->metaimage;
+      $copyrighttext=$get_sys_data[0]->copyright_text;
+      $sitebrief=$get_sys_data[0]->site_brief;
+      $sitemission=$get_sys_data[0]->site_mission;
+      $address=$get_sys_data[0]->address;
+      $sitephone=$get_sys_data[0]->site_phone;
+      $sitename=$get_sys_data[0]->site_name;
+      $support_email=$get_sys_data[0]->support_email;
+      $cardtttitlea=$get_sys_data[0]->landing_card_title_1;
+      $cardtttexta=$get_sys_data[0]->landing_card_text_1;
+      $cardttimage=$get_sys_data[0]->landing_card_image_1;
+
+      $cardtttitleb=$get_sys_data[0]->landing_card_title_2;
+      $cardtttextb=$get_sys_data[0]->landing_card_text_2;
+      $cardttimagb=$get_sys_data[0]->landing_card_image_2;
+
+      $cardtttitlec=$get_sys_data[0]->landing_card_title_3;
+      $cardtttextc=$get_sys_data[0]->landing_card_text_3;
+      $cardttimagc=$get_sys_data[0]->landing_card_image_3;
+  
+
+
+
+
+
+
+      ?>
+    <title><?php echo$metatitle;?></title>
+
+
+<title><?php echo$metatitle;?></title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" href="{{ uploads/meta/<?php echo$metafavicon;?>" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="uploads/meta/<?php echo$metafavicon;?>" /> 
+
+ <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="uploads/meta/<?php echo$metaimage;?>">
+  <meta property="og:image" content="uploads/meta/<?php echo$metaimage;?>">
+  <meta name="twitter:title" content="<?php echo$metatitle;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+   <meta name="keywords" content="<?php echo$metakeywords;?>">
+  <meta name="description" content="<?php echo$metadescription;?>">
+
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/shortcodes/shortcodes.css') }}">
+
+  
 
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="dns-prefetch" href="{{ asset('js/app.css') }}">
 
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -38,92 +94,16 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
+      
 
 
-<div class="dropdown">
-  <span> {{ Auth::user()->name }}</span>
-  <div class="dropdown-content">
-
-
-     <a  href="{{ route('logout') }}" class="nav-link"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                       <i class="fa fa-sign-out-alt"></i> {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-
-  </div>
-</div>  
-
-                         
-
-
-                          <style>
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-    
+                <br><br>
 
 
 
                                
                                    
-                               
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                   
 
         <main class="py-4">
             @yield('content')
